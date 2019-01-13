@@ -1,0 +1,42 @@
+name:                MediaMarkerToBooklog
+version:             0.1.0.0
+github:              "cohei/MediaMarkerToBooklog"
+license:             BSD3
+author:              "TANIGUCHI Kohei"
+maintainer:          "a.d.xvii.kal.mai@gmail.com"
+copyright:           "2019 TANIGUCHI Kohei"
+
+extra-source-files:
+  - README.md
+
+description:         Please see the README on GitHub at <https://github.com/cohei/MediaMarkerToBooklog#readme>
+
+dependencies:
+  - base >= 4.7 && < 5
+  - cassava
+  - data-default-class
+  - text
+  - time
+  - utf8-string
+
+ghc-options:
+  - -Wall
+  - -Wcompat
+  - -Wincomplete-uni-patterns
+  - -Wincomplete-record-updates
+  - -Wredundant-constraints
+  - -Wnoncanonical-monad-instances
+  - -fdefer-typed-holes
+
+library:
+  source-dirs: src
+
+executable:
+  main:                Main.hs
+  source-dirs:         app
+  ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+  dependencies:
+    - MediaMarkerToBooklog
